@@ -165,10 +165,30 @@
             btnIcon.className = "ph-bold ph-spinner animate-spin text-xl";
             downloadBtn.classList.add('pointer-events-none', 'opacity-90');
 
-            // Wait 2 seconds to ensure download starts, then reload page
+            // Smart Download Detection (Using Window Focus/Blur)
+            // Ye detect karega jab device ka native download popup ya manager open hoga
+            let downloadPromptOpened = false;
+
+            const onWindowBlur = () => {
+                downloadPromptOpened = true;
+            };
+
+            const onWindowFocus = () => {
+                // Jab user wapas page pe focus karega download popup ke baad
+                if (downloadPromptOpened) {
+                    window.removeEventListener('blur', onWindowBlur);
+                    window.removeEventListener('focus', onWindowFocus);
+                    window.location.reload();
+                }
+            };
+
+            window.addEventListener('blur', onWindowBlur);
+            window.addEventListener('focus', onWindowFocus);
+
+            // Fallback Timer: Agar kisi browser mein popup focus change na kare
             setTimeout(() => {
                 window.location.reload();
-            }, 2000);
+            }, 6000); // 6 seconds wait karega agar focus switch na ho
         });
     </script>
 </body>
