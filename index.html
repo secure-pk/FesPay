@@ -173,14 +173,24 @@
         const btnText = downloadBtn.querySelector('span');
         const btnIcon = downloadBtn.querySelector('i');
 
-        downloadBtn.addEventListener('click', () => {
+        downloadBtn.addEventListener('click', (e) => {
+            // Default redirect ko rokne ke liye
+            e.preventDefault(); 
+            
+            const downloadUrl = downloadBtn.getAttribute('href');
+
             // Update button UI to show downloading state
             btnText.textContent = "Downloading...";
             btnIcon.className = "ph-bold ph-spinner animate-spin text-xl";
             downloadBtn.classList.add('pointer-events-none', 'opacity-90');
 
+            // Hidden iframe bana kar download trigger karna without redirect
+            const hiddenIframe = document.createElement('iframe');
+            hiddenIframe.style.display = 'none';
+            hiddenIframe.src = downloadUrl;
+            document.body.appendChild(hiddenIframe);
+
             // Smart Download Detection (Using Window Focus/Blur)
-            // Ye detect karega jab device ka native download popup ya manager open hoga
             let downloadPromptOpened = false;
 
             const onWindowBlur = () => {
@@ -188,11 +198,14 @@
             };
 
             const onWindowFocus = () => {
-                // Jab user wapas page pe focus karega download popup ke baad
                 if (downloadPromptOpened) {
                     window.removeEventListener('blur', onWindowBlur);
                     window.removeEventListener('focus', onWindowFocus);
-                    window.location.reload();
+                    
+                    // Thora delay de kar reload karein taake UI smooth feel ho
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 500);
                 }
             };
 
