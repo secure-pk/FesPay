@@ -6,8 +6,8 @@
     
     <!-- SEO Optimization Tags -->
     <title>Download FesPay - Official Digital Wallet</title>
-    <meta name="description" content="Download FesPay Beta 2 APK. The most secure, fast, and reliable digital payment wallet application.">
-    <meta name="keywords" content="FesPay, download FesPay, FesPay apk, FesPay beta, digital wallet, secure payment app, FesPay app download">
+    <meta name="description" content="Download FesPay v1.0.5 APK. The most secure, fast, and reliable digital payment wallet application.">
+    <meta name="keywords" content="FesPay, download FesPay, FesPay apk, digital wallet, secure payment app, FesPay app download">
     <meta name="author" content="FesPay">
     
     <!-- Open Graph for Social Media & Better Indexing -->
@@ -23,8 +23,8 @@
       "name": "FesPay",
       "operatingSystem": "Android",
       "applicationCategory": "FinanceApplication",
-      "softwareVersion": "1.0.2",
-      "fileSize": "7.30 MB",
+      "softwareVersion": "1.0.5",
+      "fileSize": "7.32 MB",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -34,6 +34,183 @@
     </script>
 
     <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        logoBg: '#2db3ff',     /* Matching the new solid light blue background */
+                        logoGreen: '#71e200',  /* Matching the bright green text */
+                        primary: '#007aff',
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                        logo: ['"Arial Black"', 'Impact', 'sans-serif'], 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-tap-highlight-color: transparent;
+            /* Auto Dark/Light theme handling without toggle */
+            background-color: #f2f2f7;
+            color: #1c1c1e;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0A1128; /* Premium Navy Blue */
+                color: #ffffff;
+            }
+            .card-bg {
+                background-color: #111A31 !important; /* Slightly lighter navy for card */
+                border-color: #1E293B !important;
+            }
+            .stat-box-bg {
+                background-color: #18243E !important;
+                border-color: #24314D !important;
+            }
+        }
+
+        /* 3D effect to mimic the uploaded logo image - Cleaned for readability */
+        .text-3d-white {
+            color: #ffffff;
+            font-weight: 900;
+            /* Removed thick text-stroke to make it readable and remove glow */
+            text-shadow: 
+                0px 1px 0px #d4d4d4,
+                0px 2px 0px #c2c2c2,
+                0px 3px 0px #b0b0b0,
+                0px 4px 4px rgba(0,0,0,0.25);
+        }
+        
+        .text-3d-green {
+            color: #71e200;
+            font-weight: 900;
+            /* Removed thick text-stroke to make it readable and remove glow */
+            text-shadow: 
+                0px 1px 0px #5ebd00,
+                0px 2px 0px #4ba000,
+                0px 3px 0px #3d8200,
+                0px 4px 4px rgba(0,0,0,0.25);
+        }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col items-center justify-center p-5 overflow-hidden">
+
+    <!-- Compact Centered Card -->
+    <main class="w-full max-w-[380px] card-bg bg-white rounded-[2rem] p-7 shadow-2xl border border-slate-100 flex flex-col items-center text-center relative z-10">
+        
+        <!-- Recreated Perfect Logo (Based on the new Image) -->
+        <div class="w-24 h-24 rounded-[1.25rem] overflow-hidden flex items-center justify-center shadow-[0_8px_16px_rgba(45,179,255,0.4)] mb-3 bg-logoBg border border-blue-300/30 relative">
+            <!-- Text size slightly reduced to text-[26px] for better fit -->
+            <div class="font-logo font-black text-[26px] leading-none tracking-tight flex relative z-10 -mt-2">
+                <span class="text-3d-white">Fes</span>
+                <span class="text-3d-green">Pay</span>
+            </div>
+            <!-- Version text at the bottom of the logo -->
+            <div class="absolute bottom-1 w-full text-center">
+                <span class="text-white text-[10.5px] font-sans font-bold tracking-widest drop-shadow-md">1.0.5</span>
+            </div>
+        </div>
+
+        <!-- App Details without Background -->
+        <h1 class="text-[28px] font-extrabold tracking-tight mb-4">FesPay</h1>
+
+        <!-- Premium Disclaimer Box (Fixed Wrapping & Name) -->
+        <div class="w-full bg-slate-50 border border-slate-100 rounded-xl px-3.5 py-4 mb-4 text-left shadow-sm stat-box-bg">
+            <div class="font-mono text-[9.5px] tracking-tight leading-[1.6] text-slate-600 dark:text-slate-300">
+                <div class="mb-1 font-bold text-[11px] text-slate-800 dark:text-slate-200 tracking-normal">● 𝐃𝐢𝐬𝐜𝐥𝐚𝐢𝐦𝐞𝐫 :</div>
+                <div class="flex gap-1 mb-1.5">
+                    <span class="shrink-0">❶ :</span>
+                    <p>𝖳𝗁𝗂𝗌 𝖺𝗉𝗉𝗅𝗂𝖼𝖺𝗍𝗂𝗈𝗇 <strong class="font-bold text-slate-900 dark:text-white tracking-normal">"FesPay"</strong> 𝗂𝗌 𝖺 𝗉𝗎𝗋𝖾𝗅𝗒 𝖾𝗇𝗍𝖾𝗋𝗍𝖺𝗂𝗇𝗆𝖾𝗇𝗍-𝖻𝖺𝗌𝖾𝖽 <strong class="font-bold text-slate-900 dark:text-white tracking-normal">{𝖥𝖺e}</strong>. 𝖨𝗍 𝖽𝗈𝖾𝗌 𝗇𝗈𝗍 𝗉𝖾𝗋𝖿𝗈𝗋𝗆 𝗋𝖾𝖺𝗅 𝗍𝗋𝖺𝗇𝗌𝖺𝖼𝗍𝗂𝗈𝗇𝗌 𝖺𝗇𝖽 𝗁𝖺𝗌 𝗇𝗈 𝗅𝗂𝗇𝗄 𝗐𝗂𝗍𝗁 𝖺𝗇𝗒 𝖺𝖼𝗍𝗎𝖺𝗅 𝖿𝗂𝗇𝖺𝗇𝖼𝗂𝖺𝗅 𝗌𝖾𝗋𝗏𝗂𝖼𝖾𝗌.</p>
+                </div>
+                <div class="flex gap-1 mb-1.5">
+                    <span class="shrink-0">❷ :</span>
+                    <p>𝖴𝗌𝖾 𝗍𝗁𝗂𝗌 𝖺𝗉𝗉 𝗈𝗇𝗅𝗒 𝖿𝗈𝗋 𝖿𝗎𝗇 𝖺𝗇𝖽 𝗉𝗋𝖺𝗇𝗄 𝗉𝗎𝗋𝗉𝗈𝗌𝖾𝗌. A𝗇𝗒 𝗆𝗂𝗌𝗎𝗌𝖾, 𝖿𝗋𝖺𝗎𝖽 𝗈𝗋 𝗂𝗅𝗅𝖾𝗀𝖺𝗅 𝖺𝖼𝗍𝗂𝗏𝗂𝗍𝗒 𝗂𝗌 𝗍𝗁𝖾 𝗌𝗈𝗅𝖾 𝗋𝖾𝗌𝗉𝗈𝗇𝗌𝗂𝖻𝗂𝗅𝗂𝗍𝗒 𝗈𝖿 𝗍𝗁𝖾 𝗎𝗌𝖾𝗋.</p>
+                </div>
+                <div class="flex gap-1">
+                    <span class="shrink-0">❸ :</span>
+                    <p>𝖳𝗁𝖾 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝗂𝗌 𝗇𝗈𝗍 𝗅𝗂𝖺𝖻𝗅𝖾 𝖿𝗈𝗋 𝖺𝗇𝗒 𝗆𝗂𝗌𝗎𝗇𝖽𝖾𝗋𝗌𝗍𝖺𝗇𝖽𝗂𝗇𝗀, 𝖽𝖺𝗆𝖺𝗀𝖾, 𝗈𝗋 𝖿𝗂𝗇𝖺𝗇𝖼𝗂𝖺𝗅 𝗅𝗈𝗌𝗌 𝗋𝖾𝗌𝗎𝗅𝗍𝗂𝗇𝗀 𝖿𝗋𝗈𝗆 𝗍𝗁𝖾 𝗎𝗌𝖾 𝗈𝖿 𝗍𝗁𝗂𝗌 𝖺𝗉𝗉.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slim & Mini Stats Grid (Text Only) Below Disclaimer -->
+        <div class="flex items-center w-full gap-3 mb-6">
+            <div class="flex-1 bg-slate-50 border border-slate-100 rounded-xl py-2.5 flex items-center justify-center gap-1.5 shadow-sm stat-box-bg">
+                <span class="text-blue-400 font-bold text-[12px]">Version :</span>
+                <span class="font-bold text-sm tracking-wide">1.0.5</span>
+            </div>
+            <div class="flex-1 bg-slate-50 border border-slate-100 rounded-xl py-2.5 flex items-center justify-center gap-1.5 shadow-sm stat-box-bg">
+                <span class="text-blue-400 font-bold text-[12px]">Size :</span>
+                <span class="font-bold text-sm tracking-wide">7.32 MB</span>
+            </div>
+        </div>
+
+        <!-- Premium Install Button -->
+        <a href="https://github.com/secure-pk/FesPay/releases/download/v1.0.5/FesPay.apk" 
+           id="downloadBtn"
+           download
+           class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 active:scale-95 text-white py-3.5 rounded-2xl transition-all shadow-lg shadow-blue-500/30">
+            <i class="ph-bold ph-download-simple text-xl"></i>
+            <span class="font-bold text-[17px]">Download APK</span>
+        </a>
+
+    </main>
+
+    <script>
+        // Download Button Logic
+        const downloadBtn = document.getElementById('downloadBtn');
+        const btnText = downloadBtn.querySelector('span');
+        const btnIcon = downloadBtn.querySelector('i');
+
+        downloadBtn.addEventListener('click', () => {
+            // Update button UI to show downloading state
+            btnText.textContent = "Downloading...";
+            btnIcon.className = "ph-bold ph-spinner animate-spin text-xl";
+            downloadBtn.classList.add('pointer-events-none', 'opacity-90');
+
+            // Smart Download Detection (Using Window Focus/Blur)
+            // Ye detect karega jab device ka native download popup ya manager open hoga
+            let downloadPromptOpened = false;
+
+            const onWindowBlur = () => {
+                downloadPromptOpened = true;
+            };
+
+            const onWindowFocus = () => {
+                // Jab user wapas page pe focus karega download popup ke baad
+                if (downloadPromptOpened) {
+                    window.removeEventListener('blur', onWindowBlur);
+                    window.removeEventListener('focus', onWindowFocus);
+                    window.location.reload();
+                }
+            };
+
+            window.addEventListener('blur', onWindowBlur);
+            window.addEventListener('focus', onWindowFocus);
+
+            // Fallback Timer: Agar kisi browser mein popup focus change na kare
+            setTimeout(() => {
+                window.location.reload();
+            }, 6000); // 6 seconds wait karega agar focus switch na ho
+        });
+    </script>
+</body>
+</html>
+
+
+
+```
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
